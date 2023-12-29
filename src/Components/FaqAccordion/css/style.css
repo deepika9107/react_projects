@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap");
+* {
+  font-family: "Work Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: hsl(275, 100%, 97%);
+}
+
+.contaier {
+  position: relative;
+}
+
+.background_image {
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  background-image: url(background-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.faq_container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  padding-bottom: 0;
+  width: 420px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+}
+.faq_container .header {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 15px;
+}
+.faq_container .header img {
+  width: 25px;
+  height: 25px;
+}
+.faq_container .header h1 {
+  margin: 0;
+  color: hsl(292, 42%, 14%);
+  font-weight: 700;
+}
+.faq_container dl {
+  margin: 0;
+}
+.faq_container dl hr {
+  border: 0.5px solid hsl(275, 100%, 97%);
+  border-radius: 50%;
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+.faq_container dl dt {
+  font-size: 15px;
+  display: flex;
+  color: hsl(292, 42%, 14%);
+  justify-content: space-between;
+  font-weight: 600;
+  cursor: pointer;
+}
+.faq_container dl dt:hover {
+  color: rgb(173, 40, 235);
+}
+.faq_container dl dt img {
+  height: 25px;
+  width: 25px;
+}
+.faq_container dl dd {
+  margin: 0;
+  margin-top: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  color: rgb(165, 164, 164);
+}
+
+@media (max-width: 375px) {
+  body {
+    height: calc(100vh - 1px);
+  }
+  .background_image {
+    background-image: url(background-pattern-mobile.svg) repeat;
+    background-size: contain;
+  }
+  .faq_container {
+    width: 220px;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap");
+
+$White: hsl(0, 0%, 100%);
+$Light-pink: hsl(275, 100%, 97%);
+$Grayish-purple: hsl(292, 16%, 49%);
+$Dark-purple: hsl(292, 42%, 14%);
+
+* {
+  font-family: "Work Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: $Light-pink;
+}
+
+.contaier {
+  position: relative;
+}
+
+.background_image {
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  background-image: url(background-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.faq_container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  padding-bottom: 0;
+  width: 420px;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  border-radius: 10px;
+  background-color: $White;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+
+  .header {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 15px;
+
+    img {
+      width: 25px;
+      height: 25px;
+    }
+    h1 {
+      margin: 0;
+      color: $Dark-purple;
+      font-weight: 700;
+    }
+  }
+
+  dl {
+    margin: 0;
+
+    hr {
+      border: 0.5px solid $Light-pink;
+      border-radius: 50%;
+      margin-top: 22px;
+      margin-bottom: 22px;
+    }
+    dt {
+      font-size: 15px;
+      display: flex;
+      color: $Dark-purple;
+      justify-content: space-between;
+      font-weight: 600;
+      cursor: pointer;
+
+      &:hover {
+        color: rgb(173 40 235);
+      }
+      img {
+        height: 25px;
+        width: 25px;
+      }
+    }
+    dd {
+      margin: 0;
+      margin-top: 20px;
+      line-height: 20px;
+      font-size: 12px;
+      color: rgb(165, 164, 164);
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    height: calc(100vh - 1px);
+  }
+  .background_image {
+    background-image: url(background-pattern-mobile.svg) repeat;
+    background-size: contain;
+  }
+  .faq_container {
+    width: 220px;
+  }
+}
