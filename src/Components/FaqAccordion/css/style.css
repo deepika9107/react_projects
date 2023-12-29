@@ -14,7 +14,7 @@ body {
 
 .background_image {
   position: absolute;
-  height: 200px;
+  height: 40%;
   width: 100%;
   background-image: url(background-pattern-desktop.svg);
   background-repeat: no-repeat;
